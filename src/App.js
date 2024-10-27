@@ -8,7 +8,7 @@ import Header from './components/layout/Header';
 import MobileDrawer from './components/layout/MobileDrawer';
 import MainNavigation from './components/layout/MainNavigation';
 import Footer from './components/layout/Footer';
-import AIFinancialAdvisor from "./page/AIFinancialAdvisor";
+import AIFinancialAdvisor from "./pages/AIFinancialAdvisor";
 import HeroBanner from "./components/sections/HeroBanner";
 import FinancialProducts from "./components/sections/FinancialProducts";
 import NewsSection from "./components/sections/NewsSection";
