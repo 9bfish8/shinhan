@@ -1,0 +1,15 @@
+/* styles/globals.css 또는 해당하는 스타일 파일 */
+.ir {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.ir span {
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
