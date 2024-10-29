@@ -1,4 +1,5 @@
 // src/data/financialData.js
+// src/data/financialData.js
 export const accountDetails = {
     dailyUpdates: [
         {
@@ -14,6 +15,7 @@ export const accountDetails = {
     accounts: [
         {
             type: '입출금계좌',
+            bank: '신한은행',
             number: '110-123-456789',
             balance: 2500000,
             recentTransactions: [
@@ -24,6 +26,7 @@ export const accountDetails = {
         },
         {
             type: '저축예금',
+            bank: '신한은행',
             number: '110-987-654321',
             balance: 15000000,
             recentTransactions: [
@@ -44,8 +47,123 @@ export const accountDetails = {
                 { date: '2024-02-25', store: '주유소', amount: 70000 }
             ]
         }
+    ],
+    investments: [
+        {
+            type: '주식계좌',
+            bank: '신한투자증권',
+            accountNumber: '123-456-789',
+            totalValue: 8500000,
+            profitRate: '+15.2%',
+            holdings: [
+                { name: '삼성전자', quantity: 50, currentValue: 3750000 },
+                { name: 'NAVER', quantity: 10, currentValue: 2350000 },
+                { name: '카카오', quantity: 20, currentValue: 2400000 }
+            ]
+        },
+        {
+            type: '펀드',
+            bank: '신한투자증권',
+            accountNumber: '987-654-321',
+            totalValue: 12000000,
+            profitRate: '+8.5%',
+            holdings: [
+                { name: '글로벌성장펀드', value: 7000000, profitRate: '+10.2%' },
+                { name: '국내채권형펀드', value: 5000000, profitRate: '+5.8%' }
+            ]
+        },
+        {
+            type: 'ETF 포트폴리오',
+            bank: '신한투자증권',
+            accountNumber: '456-789-123',
+            totalValue: 5000000,
+            profitRate: '+12.3%',
+            holdings: [
+                { name: 'KODEX 200', quantity: 100, currentValue: 3000000 },
+                { name: 'TIGER 차이나전기차', quantity: 200, currentValue: 2000000 }
+            ]
+        }
+    ],
+    loans: [
+        {
+            type: '신용대출',
+            bank: '신한은행',
+            accountNumber: '111-222-333',
+            remainingAmount: 30000000,
+            interestRate: '4.25%',
+            monthlyPayment: 875000,
+            maturityDate: '2026-12-31',
+            startDate: '2024-01-15'
+        },
+        {
+            type: '전세자금대출',
+            bank: '신한은행',
+            accountNumber: '444-555-666',
+            remainingAmount: 150000000,
+            interestRate: '3.85%',
+            monthlyPayment: 720000,
+            maturityDate: '2026-06-30',
+            startDate: '2023-06-30'
+        },
+        {
+            type: '마이카대출',
+            bank: '신한은행',
+            accountNumber: '777-888-999',
+            remainingAmount: 20000000,
+            interestRate: '4.5%',
+            monthlyPayment: 445000,
+            maturityDate: '2027-01-31',
+            startDate: '2024-01-31'
+        }
+    ],
+    insurances: [
+        {
+            type: '종신보험',
+            company: '신한생명',
+            policyNumber: 'L12345678',
+            monthlyPremium: 150000,
+            coverage: '3억원',
+            expiryDate: '2053-12-31',
+            startDate: '2023-01-01',
+            benefits: [
+                '사망보험금 3억원',
+                '암진단금 5천만원',
+                '입원일당 10만원',
+                '수술비 300만원'
+            ]
+        },
+        {
+            type: '실손의료보험',
+            company: '신한생명',
+            policyNumber: 'M87654321',
+            monthlyPremium: 85000,
+            coverage: '상해/질병 의료비',
+            expiryDate: '2053-12-31',
+            startDate: '2023-01-01',
+            benefits: [
+                '입원의료비 90%',
+                '통원의료비 90%',
+                '약제비 90%'
+            ]
+        },
+        {
+            type: '운전자보험',
+            company: '신한생명',
+            policyNumber: 'D98765432',
+            monthlyPremium: 45000,
+            coverage: '최대 1억원',
+            expiryDate: '2033-12-31',
+            startDate: '2023-06-01',
+            benefits: [
+                '자동차사고 벌금',
+                '교통사고 합의금',
+                '변호사 선임비용',
+                '면허정지/취소 위로금'
+            ]
+        }
     ]
 };
+
 
 // src/data/financialData.js
 export const recommendedProducts = [
