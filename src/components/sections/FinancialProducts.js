@@ -31,7 +31,7 @@ const FinancialProducts = () => (
                                 mb: 1
                             }}
                         >
-                            <img src="/img/placeholder.png" alt={item} style={{ width: 32, height: 32 }} />
+                            <img src="/images/placeholder.png" alt={item} style={{ width: 32, height: 32 }} />
                         </Box>
                         <Typography>{item}</Typography>
                     </Paper>

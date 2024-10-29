@@ -38,7 +38,7 @@ const RecommendedProducts = () => (
                                 mb: 2
                             }}
                         >
-                            <img src="/img/placeholder.png" alt={item} style={{ width: 40, height: 40 }} />
+                            <img src="/images/placeholder.png" alt={item} style={{ width: 40, height: 40 }} />
                         </Box>
                         <Typography variant="h6" gutterBottom>{item}</Typography>
                         <Typography color="text.secondary">
