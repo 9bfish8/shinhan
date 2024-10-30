@@ -52,7 +52,10 @@ const AnalysisResultCard = ({ selectedProduct }) => {
 const AnalysisContent = ({ product }) => (
     <Stack spacing={4}>
         <ProductFeatures features={product.features} />
-        <AIAnalysis analysis={product.analysis} />
+        <AIAnalysis
+            analysis={product.analysis}
+            recommendationRationale={product.recommendationRationale}  // 추가
+        />
         <ProfitAnalysis data={product.analysis.graphData} />
     </Stack>
 );
@@ -83,16 +86,46 @@ const ProductFeatures = ({ features }) => (
 
 // src/components/ai-advisor/AnalysisResultCard.jsx (계속)
 
-const AIAnalysis = ({ analysis }) => (
+const AIAnalysis = ({ analysis, recommendationRationale }) => (
     <Box>
         <Typography variant="h6" gutterBottom color="#0046FF">
             AI 분석 의견
         </Typography>
+        <Box
+            sx={{
+                bgcolor: 'rgba(0, 70, 255, 0.05)',
+                p: 3,
+                borderRadius: 2,
+                mb: 2
+            }}
+        >
+            <Typography
+                variant="subtitle1"
+                sx={{
+                    color: '#0046FF',
+                    fontWeight: 'bold',
+                    mb: 2
+                }}
+            >
+                맞춤형 상품 추천 근거
+            </Typography>
+            <Typography
+                variant="body1"
+                sx={{
+                    color: 'text.secondary',
+                    whiteSpace: 'pre-line',
+                    lineHeight: 1.7
+                }}
+            >
+                {recommendationRationale}
+            </Typography>
+        </Box>
         <Typography
             variant="body1"
             sx={{
-                bgcolor: 'rgba(0, 70, 255, 0.05)',
+                mt: 2,
                 p: 2,
+                bgcolor: 'rgba(0, 70, 255, 0.05)',
                 borderRadius: 2,
                 color: 'text.secondary'
             }}
